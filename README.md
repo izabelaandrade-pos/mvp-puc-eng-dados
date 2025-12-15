@@ -7,13 +7,13 @@ Repositório para documentação do MVP produzido na Sprint de Engenharia de Dad
 
 ---
 
-## ✨ 1. Visão Geral
+## 1. Visão Geral
 
 Este repositório contém o projeto de Engenharia de Dados e a análise completa do mercado de imóveis residenciais na cidade de São Paulo. O objetivo é fornecer um panorama de preços e valorização para orientar a estratégia de **"House Flipping"** (compra, reforma e revenda rápida de imóveis com desconto).
 
 O trabalho envolveu a ingestão de grandes volumes de dados públicos, a aplicação de técnicas de qualidade de dados (**Delta Lake/Spark**) e a construção de um modelo de dados otimizado para análise.
 
-## 🚀 2. Resultados Chave e Descobertas
+## 2. Resultados Chave e Descobertas
 
 O estudo focado em transações de compra e venda de imóveis residenciais (Jan/2022 a Out/2025) revelou os seguintes *insights* críticos para investidores:
 
@@ -23,7 +23,7 @@ O estudo focado em transações de compra e venda de imóveis residenciais (Jan/
 * **Preferência de Pagamento:** A maioria das transações (cerca de **63,5%**) é realizada sem financiamento imobiliário. Isso sugere que propostas de compra à vista têm um peso competitivo significativo para conseguir descontos.
 * **Limitação da Análise:** Não foi possível correlacionar a valorização com características granulares dos imóveis (quartos, vagas, elevador), devido à indisponibilidade dessas informações em dados públicos de ITBI.
 
-## ⚙️ 3. Metodologia e Tecnologias
+## 3. Metodologia e Tecnologias
 
 O projeto seguiu a **arquitetura de Data Lakehouse**, utilizando o padrão **Medallion**, com camadas Bronze (dados brutos), Prata (dados tratados) e Ouro (dados agregados para análise).
 
@@ -35,7 +35,7 @@ O projeto seguiu a **arquitetura de Data Lakehouse**, utilizando o padrão **Med
 | **Modelagem** | Esquema Estrela (Prata) e Flat (Ouro) | Criação de tabelas Fato (`guias_itbi_prata`) e Dimensões (`cep_sp_capital`, `tabela_dim_usos`). E criação de uma tabela Flat (`guias_itbi_ouro`). |
 | **Qualidade de Dados** | Testes de Unicidade, Integridade, Validade e Consistência | Tratamento de valores nulos, *outliers* de área, padronização de percentuais, exclusão de valores não válidos e filtragem de transações fora do escopo. |
 
-## 📂 4. Estrutura do Repositório
+## 4. Estrutura do Repositório
 
 O projeto está dividido em três *notebooks*, que seguem a jornada da Engenharia de Dados e Análise:
 
@@ -43,7 +43,7 @@ O projeto está dividido em três *notebooks*, que seguem a jornada da Engenhari
 * **20251201_MVP_EngDados_parte2.ipynb:** Modelagem, Qualidade e Transformação de Dados (Criação das Camadas Prata e Ouro).
 * **20251201_MVP_EngDados_parte3.ipynb:** Análise Exploratória e Conclusões Finais (Resposta às Perguntas de Negócio e Visualizações).
 
-## 🛠️ 5. Como Executar (Pré-requisitos)
+## 5. Como Executar (Pré-requisitos)
 
 Para reproduzir este projeto, você precisará de um ambiente que suporte o processamento distribuído de dados:
 
